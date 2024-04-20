@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import styles from './Sidebar.module.scss';
 import { classNames } from 'shared/lib/classNames/classNames';
-import Button, { ThemeButton } from 'shared/UI/Button/Button';
-import ThemeSwitcher from 'shared/UI/ThemeSwitcher/ThemeSwitcher';
+import Button, { ThemeButton } from 'shared/ui/Button/Button';
+import { ThemeSwitcher } from 'features/ThemeSwitcher';
 
 interface SidebarProps {
     className?: string;

@@ -1,5 +1,4 @@
-import React from 'react';
-import Container from "shared/UI/Container/Container";
+import Container from 'shared/ui/Container/Container';
 
 const MainPage = () => {
     return (

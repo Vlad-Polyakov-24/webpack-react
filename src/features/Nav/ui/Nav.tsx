@@ -1,6 +1,6 @@
 import styles from './Nav.module.scss';
 import { classNames } from 'shared/lib/classNames/classNames';
-import AppNavLink, { AppNavLinkTheme } from 'shared/UI/AppNavLink/AppNavLink';
+import AppNavLink, { AppNavLinkTheme } from 'shared/ui/AppNavLink/AppNavLink';
 
 interface NavProps {
     className?: string;
