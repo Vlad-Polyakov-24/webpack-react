@@ -8,18 +8,18 @@ import { Sidebar } from 'widgets/Sidebar';
 import { Footer } from 'widgets/Footer';
 
 const App = () => {
-    const {theme} = useTheme();
+	const { theme } = useTheme();
 
-    return (
-        <div className={classNames('app', {}, [theme])}>
-            <Header/>
-            <div className="page">
-                <Sidebar/>
-                <AppRouter/>
-            </div>
-            <Footer/>
-        </div>
-    );
+	return (
+		<div className={classNames('app', {}, [theme])}>
+			<Header/>
+			<div className="page">
+				<Sidebar/>
+				<AppRouter/>
+			</div>
+			<Footer/>
+		</div>
+	);
 };
 
 export default App;
