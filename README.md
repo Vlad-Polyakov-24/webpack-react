@@ -62,9 +62,13 @@ For Example
 
 #### Linters
 
-Run `npm run lint` to find problematic patterns or code\
+Run `npm run lint:ts` to find problematic patterns or code\
 that doesn't adhere to certain style guidelines in the\
-project. You can also use `npm run lint:fix` to fix them.
+project. You can also use `npm run lint:ts:fix` to fix them.
+
+Run `npm run lint:scss` to find problematic styles\
+that doesn't adhere to certain style guidelines in the\
+project. You can also use `npm run lint:scss:fix` to fix them.
 
 ##### How to compress images
 
