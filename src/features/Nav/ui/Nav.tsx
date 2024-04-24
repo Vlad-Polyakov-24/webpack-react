@@ -9,7 +9,9 @@ type NavProps = {
 
 const Nav = ({ className, place }: NavProps) => {
 	return (
-		<nav className={classNames(styles.nav, { [styles.navHeader]: place === 'header', [styles.navFooter]: place === 'footer' }, [className])}>
+		<nav className={classNames(styles.nav,
+			{ [styles.navHeader]: place === 'header', [styles.navFooter]: place === 'footer' },
+			[className])}>
 			<ul className={styles.nav__list}>
 				<li>
 					<AppNavLink to='/' theme={AppNavLinkTheme.SECONDARY}>Main</AppNavLink>

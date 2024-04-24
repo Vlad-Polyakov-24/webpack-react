@@ -7,7 +7,9 @@ type PageErrorProps = {
 };
 
 const PageError = ({ className }: PageErrorProps) => {
-	const onReload = () => location.reload();
+	const onReload = () => {
+		location.reload(); 
+	};
 
 	return (
 		<div className={ classNames(styles.pageError, {}, [className]) }>
