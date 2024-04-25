@@ -18,7 +18,7 @@ const Sidebar = ({ className }: SidebarProps) => {
 	return (
 		<aside className={classNames(styles.sidebar, { [styles.collapsed]: collapsed }, [className])}>
 			<Button
-				theme={ThemeButton.DEFAULT}
+				theme={ThemeButton.OUTLINE}
 				onClick={onToggle}
 				className='m-centred'
 			>
