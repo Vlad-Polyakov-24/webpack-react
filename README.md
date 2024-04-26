@@ -70,6 +70,20 @@ Run `npm run lint:scss` to find problematic styles\
 that doesn't adhere to certain style guidelines in the\
 project. You can also use `npm run lint:scss:fix` to fix them.
 
+#### Jest
+
+Run `npm run test:unit` to run jest.\
+
+#### Storybook
+
+Run `npm run storybook` to run storybook.\
+You can also use `npm run storybook:build` to run storybook build.
+
+#### Loki
+
+Run `npm run test:ui` to run loki.\
+You can also use `npm run test:ui:ok` to approve changes.
+
 ##### How to compress images
 
 **Download this plugin in Webstorm IDE and registered**
