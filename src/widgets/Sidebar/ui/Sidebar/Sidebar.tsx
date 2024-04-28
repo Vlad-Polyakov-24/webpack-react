@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import styles from './Sidebar.module.scss';
 import { classNames } from 'shared/lib/classNames/classNames';
-import Button, { ThemeButton } from 'shared/ui/Button/Button';
+import Button, { ButtonSize, ButtonTheme } from 'shared/ui/Button/Button';
 import { ThemeSwitcher } from 'features/ThemeSwitcher';
+import { Nav } from 'features/Nav';
 
 type SidebarProps = {
 	className?: string;
@@ -18,12 +19,15 @@ const Sidebar = ({ className }: SidebarProps) => {
 	return (
 		<aside className={classNames(styles.sidebar, { [styles.collapsed]: collapsed }, [className])}>
 			<Button
-				theme={ThemeButton.OUTLINE}
+				theme={ButtonTheme.BACKGROUND_INVERTED}
+				size={ButtonSize.L}
+				square
+				className={styles.sidebar__btn}
 				onClick={onToggle}
-				className='m-centred'
 			>
-				Toggle
+				{collapsed ? '>' : '<'}
 			</Button>
+			<Nav place='sidebar' icons collapsed={collapsed}/>
 			<ul className={styles.sidebar__switchers}>
 				<li className={styles.sidebar__switchersItem}>
 					<ThemeSwitcher/>

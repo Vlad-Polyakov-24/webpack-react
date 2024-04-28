@@ -25,6 +25,19 @@ export const InHeaderDark: Story = {
 	decorators: [ThemeDecorator(Theme.DARK)],
 };
 
+export const InSidebarDefault: Story = {
+	args: {
+		place: 'sidebar',
+	},
+};
+
+export const InSidebarDark: Story = {
+	args: {
+		place: 'sidebar',
+	},
+	decorators: [ThemeDecorator(Theme.DARK)],
+};
+
 export const InFooterDefault: Story = {
 	args: {
 		place: 'footer',
