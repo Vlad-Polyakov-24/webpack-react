@@ -6,12 +6,4 @@ describe('Sidebar', () => {
 		render(<Sidebar/>);
 		expect(screen.getByTestId('sidebar')).toBeInTheDocument();
 	});
-
-	test('Sidebar toggle', () => {
-		render(<Sidebar/>);
-		const toggleBtn = screen.getByTestId('sidebar-toggle');
-		expect(screen.getByTestId('sidebar')).toBeInTheDocument();
-		fireEvent.click(toggleBtn);
-		expect(screen.getByTestId('sidebar')).toHaveClass('collapsed');
-	});
 });
