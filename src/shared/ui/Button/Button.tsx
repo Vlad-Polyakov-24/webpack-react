@@ -37,7 +37,7 @@ const Button: FC<ButtonProps> = (props) => {
 	} = props;
 	const mods = {
 		[styles.btnSquare]: square,
-		[styles[size]]: true,
+		[styles[size]]: size,
 	};
 
 	return (

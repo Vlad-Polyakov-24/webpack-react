@@ -3,7 +3,7 @@ import styles from './Header.module.scss';
 import { Link } from 'react-router-dom';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Nav } from 'features/Nav';
-import Button, { ButtonTheme } from 'shared/ui/Button/Button';
+import Button, { ButtonSize, ButtonTheme } from 'shared/ui/Button/Button';
 import Modal from 'shared/ui/Modal/Modal';
 import Logo from 'shared/assets/icons/logo.svg';
 
