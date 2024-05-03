@@ -28,7 +28,7 @@ const Header = ({ className }: HeaderProps) => {
 				</strong>
 				<Nav/>
 				<Button theme={ButtonTheme.OUTLINE_INVERTED} onClick={onToggleModal}>
-					Login
+					Modal
 				</Button>
 				<Modal isOpen={isAuthModal} onClose={onToggleModal}>
 					<p>
