@@ -1,6 +1,7 @@
+import { memo } from 'react';
 import Container from 'shared/ui/Container/Container';
 
-const AboutPage = () => {
+const AboutPage = memo(() => {
 	return (
 		<section>
 			<Container>
@@ -8,6 +9,6 @@ const AboutPage = () => {
 			</Container>
 		</section>
 	);
-};
+});
 
 export default AboutPage;

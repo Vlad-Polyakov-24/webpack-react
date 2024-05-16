@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import styles from './NotFoundPage.module.scss';
 import { classNames } from 'shared/lib/classNames/classNames';
 import Container from 'shared/ui/Container/Container';
@@ -6,7 +7,7 @@ type NotFoundPageProps = {
 	className?: string;
 };
 
-const NotFoundPage = ({ className }: NotFoundPageProps) => {
+const NotFoundPage = memo(({ className }: NotFoundPageProps) => {
 
 	return (
 		<div className={classNames(styles.notFound, {}, [className])}>
@@ -15,6 +16,6 @@ const NotFoundPage = ({ className }: NotFoundPageProps) => {
 			</Container>
 		</div>
 	);
-};
+});
 
 export default NotFoundPage;

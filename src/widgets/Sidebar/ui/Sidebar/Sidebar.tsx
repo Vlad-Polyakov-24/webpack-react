@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { memo, useState } from 'react';
 import styles from './Sidebar.module.scss';
 import { classNames } from 'shared/lib/classNames/classNames';
 import Button, { ButtonSize, ButtonTheme } from 'shared/ui/Button/Button';
@@ -9,7 +9,7 @@ type SidebarProps = {
 	className?: string;
 };
 
-const Sidebar = ({ className }: SidebarProps) => {
+const Sidebar = memo(({ className }: SidebarProps) => {
 	const [collapsed, setCollapsed] = useState(false);
 
 	const onToggle = () => {
@@ -35,6 +35,6 @@ const Sidebar = ({ className }: SidebarProps) => {
 			</ul>
 		</aside>
 	);
-};
+});
 
 export default Sidebar;

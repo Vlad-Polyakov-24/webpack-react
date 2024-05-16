@@ -1,10 +1,11 @@
+import { memo } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import styles from './Counter.module.scss';
 import { counterActions } from '../model/slice/counterSlice';
 import getCounterValue from '../model/selectors/getCounterValue/getCounterValue';
 import Button, { ButtonTheme } from 'shared/ui/Button/Button';
 
-const Counter = () => {
+const Counter = memo(() => {
 	const dispatch = useDispatch();
 	const counterValue = useSelector(getCounterValue);
 
@@ -25,6 +26,6 @@ const Counter = () => {
 			</div>
 		</div>
 	);
-};
+});
 
 export default Counter;
