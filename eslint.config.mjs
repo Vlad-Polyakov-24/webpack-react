@@ -37,6 +37,7 @@ export default [
       'max-len': [2, { code: 150, ignoreComments: true }],
       'react-hooks/rules-of-hooks': 2,
       'react-hooks/exhaustive-deps': 2,
+      'react/display-name': 0,
     },
     plugins: [
       'react-hooks',
