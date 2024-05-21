@@ -15,11 +15,11 @@ const ComponentRender = (component: ReactNode, options: ComponentRenderOptions =
 	} = options;
 
 	return render(
-		<StoreProvider initialState={initialState}>
-			<MemoryRouter initialEntries={[route]}>
+		<MemoryRouter initialEntries={[route]}>
+			<StoreProvider initialState={initialState}>
 				{component}
-			</MemoryRouter>
-		</StoreProvider>,
+			</StoreProvider>
+		</MemoryRouter>,
 	);
 };
 

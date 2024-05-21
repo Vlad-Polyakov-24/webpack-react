@@ -10,7 +10,7 @@ type NavProps = {
 	collapsed?: boolean;
 };
 
-const Nav = ({ className, place, icons, collapsed = false }: NavProps) => {
+const Nav = ({ className, place, icons = false, collapsed = false }: NavProps) => {
 	const mods = {
 		[styles.navHeader]: place === 'header',
 		[styles.navFooter]: place === 'footer',

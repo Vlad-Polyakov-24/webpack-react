@@ -1,6 +1,6 @@
 import { type ButtonHTMLAttributes, memo } from 'react';
 import styles from './Button.module.scss';
-import { classNames } from 'shared/lib/classNames/classNames';
+import { classNames, type Mods } from 'shared/lib/classNames/classNames';
 
 export enum ButtonTheme {
 	CLEAR = 'btn--clear',
@@ -29,13 +29,13 @@ const Button = memo((props: ButtonProps) => {
 	const {
 		className,
 		children,
-		theme,
+		theme = ButtonTheme.OUTLINE,
 		type = 'button',
 		square,
-		size,
+		size = ButtonSize.M,
 		...otherProps
 	} = props;
-	const mods = {
+	const mods: Mods = {
 		[styles.btnSquare]: square,
 		[styles[size]]: size,
 	};

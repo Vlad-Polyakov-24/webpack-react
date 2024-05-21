@@ -1,6 +1,6 @@
 import { type MouseEvent, type ReactNode, useCallback, useEffect, useRef, useState } from 'react';
 import styles from './Modal.module.scss';
-import { classNames } from 'shared/lib/classNames/classNames';
+import { classNames, type Mods } from 'shared/lib/classNames/classNames';
 import Portal from 'shared/ui/Portal/Portal';
 
 type ModalProps = {
@@ -24,7 +24,7 @@ const Modal = (props: ModalProps) => {
 	const [isClosing, setIsClosing] = useState(false);
 	const [isMounted, setIsMounted] = useState(false);
 	const timerRef = useRef<ReturnType<typeof setTimeout>>();
-	const mods: Record<string, boolean> = {
+	const mods: Mods = {
 		[styles.open]: isOpen,
 		[styles.closing]: isClosing,
 	};
