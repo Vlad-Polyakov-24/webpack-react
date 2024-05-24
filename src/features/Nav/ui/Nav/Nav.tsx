@@ -1,5 +1,6 @@
 import styles from './Nav.module.scss';
-import { classNames } from 'shared/lib/classNames/classNames';
+import { memo, useMemo } from 'react';
+import { classNames, type Mods } from 'shared/lib/classNames/classNames';
 import { NavItemsList } from '../../model/NavItems';
 import NavItem from '../NavItem/NavItem';
 
@@ -10,8 +11,8 @@ type NavProps = {
 	collapsed?: boolean;
 };
 
-const Nav = ({ className, place, icons = false, collapsed = false }: NavProps) => {
-	const mods = {
+const Nav = memo(({ className, place, icons = false, collapsed = false }: NavProps) => {
+	const mods: Mods = {
 		[styles.navHeader]: place === 'header',
 		[styles.navFooter]: place === 'footer',
 		[styles.navSidebar]: place === 'sidebar',
@@ -20,15 +21,15 @@ const Nav = ({ className, place, icons = false, collapsed = false }: NavProps) =
 	return (
 		<nav className={classNames(styles.nav, mods, [className])}>
 			<ul className={styles.nav__list}>
-				{NavItemsList.map((item) => <NavItem
+				{useMemo(() => NavItemsList.map((item) => <NavItem
 					key={item.path}
 					item={item}
 					collapsed={collapsed}
 					icon={icons}
-				/>)}
+				/>), [collapsed, icons])}
 			</ul>
 		</nav>
 	);
-};
+});
 
 export default Nav;
