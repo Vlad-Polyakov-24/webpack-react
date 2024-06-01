@@ -15,13 +15,13 @@ export default [
   ...compat.extends('xo-typescript'),
   ...compat.config({
     rules: {
-      'object-curly-spacing': ['error', 'always'],
+      'object-curly-spacing': [2, 'always'],
       indent: [2, 'tab'],
       'react/jsx-indent': [2, 'tab'],
       'react/jsx-indent-props': [2, 'tab'],
       'react/react-in-jsx-scope': 0,
       '@typescript-eslint/indent': [2, 'tab'],
-      '@typescript-eslint/object-curly-spacing': ['error', 'always'],
+      '@typescript-eslint/object-curly-spacing': [2, 'always'],
       '@typescript-eslint/prefer-nullish-coalescing': 0,
       '@typescript-eslint/no-unsafe-argument': 0,
       '@typescript-eslint/no-unsafe-assignment': 0,
