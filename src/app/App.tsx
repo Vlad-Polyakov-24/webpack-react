@@ -1,4 +1,4 @@
-import { AppRouter } from 'app/providers/router';
+import { AppRouter } from 'app/providers/AppRouter';
 import { Header } from 'widgets/Header';
 import { Sidebar } from 'widgets/Sidebar';
 import { Footer } from 'widgets/Footer';

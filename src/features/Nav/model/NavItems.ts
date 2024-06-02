@@ -1,5 +1,5 @@
 import React from 'react';
-import { RoutePath } from 'shared/config/routeConfig/routeConfig';
+import { RoutePath } from 'app/providers/AppRouter/config/routeConfig/routeConfig';
 import PageMainIcon from 'shared/assets/icons/page-main_icon.svg';
 import PageAboutIcon from 'shared/assets/icons/page-about_icon.svg';
 
