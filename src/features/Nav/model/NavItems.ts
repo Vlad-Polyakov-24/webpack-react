@@ -7,6 +7,7 @@ export type NavItemType = {
 	path: string;
 	text: string;
 	Icon: React.FC<React.SVGProps<SVGSVGElement>>;
+	authOnly?: boolean;
 };
 
 export const NavItemsList: NavItemType[] = [
@@ -14,10 +15,12 @@ export const NavItemsList: NavItemType[] = [
 		path: RoutePath.main,
 		Icon: PageMainIcon,
 		text: 'main',
+		authOnly: false,
 	},
 	{
 		path: RoutePath.about,
 		Icon: PageAboutIcon,
 		text: 'about',
+		authOnly: false,
 	},
 ];

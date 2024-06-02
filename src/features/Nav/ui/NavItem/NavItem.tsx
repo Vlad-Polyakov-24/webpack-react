@@ -11,6 +11,10 @@ type NavItemProps = {
 };
 
 const NavItem = memo(({ item, collapsed, icon }: NavItemProps) => {
+	const isAuth = true; // authorization logic
+
+	if (item.authOnly && !isAuth) return null;
+
 	return (
 		<li>
 			<AppNavLink

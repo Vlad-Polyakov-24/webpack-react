@@ -9,7 +9,9 @@ const App = () => {
 			<Header/>
 			<div className='page'>
 				<Sidebar/>
-				<AppRouter/>
+				<div className='main'>
+					<AppRouter/>
+				</div>
 			</div>
 			<Footer/>
 		</div>
